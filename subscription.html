@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans - Tilak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #d1d5db;
+        }
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #374151;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        .popular {
+            border-color: #3b82f6;
+            position: relative;
+            overflow: hidden;
+        }
+        .popular-badge {
+            position: absolute;
+            top: 18px;
+            right: -35px;
+            transform: rotate(45deg);
+            background-color: #3b82f6;
+            color: white;
+            padding: 4px 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-900 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-white">Tilak</a>
+            <a href="index.html" class="text-gray-300 hover:text-blue-500 transition">&larr; Back to Home</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 md:py-24">
+
+        <section id="pricing">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Choose Your Plan</h1>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">Select the perfect subscription package that fits your creative needs and budget.</p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Plan -->
+                <div class="pricing-card bg-gray-800 p-8 rounded-lg flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-2">Starter</h3>
+                    <p class="text-gray-400 mb-6">Ideal for personal projects & startups.</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-white">₹7,999</span>
+                        <span class="text-gray-400">/month</span>
+                    </div>
+                    <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 Photoshoot / month</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>50 Edited Photos</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Basic Retouching</li>
+                    </ul>
+                    <button class="select-plan-btn mt-auto w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition" data-plan="Starter" data-price="7999">Select Plan</button>
+                </div>
+
+                <!-- Pro Plan (Most Popular) -->
+                <div class="pricing-card bg-gray-800 p-8 rounded-lg flex flex-col popular">
+                    <div class="popular-badge">POPULAR</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Pro</h3>
+                    <p class="text-blue-400 mb-6">Perfect for growing businesses & content creators.</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-white">₹19,999</span>
+                        <span class="text-gray-400">/month</span>
+                    </div>
+                    <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>2 Photoshoots / month</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 Cinematic Video (2-3 min)</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Advanced Editing & Color Grade</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Priority Support</li>
+                    </ul>
+                    <button class="select-plan-btn mt-auto w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition" data-plan="Pro" data-price="19999">Select Plan</button>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card bg-gray-800 p-8 rounded-lg flex flex-col">
+                    <h3 class="text-2xl font-bold text-white mb-2">Premium</h3>
+                    <p class="text-gray-400 mb-6">For established brands needing constant content.</p>
+                    <div class="mb-6">
+                        <span class="text-5xl font-extrabold text-white">₹39,999</span>
+                        <span class="text-gray-400">/month</span>
+                    </div>
+                    <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>4 Shoots / month (Photo/Video)</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Edits</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full Production Management</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>24/7 Support</li>
+                    </ul>
+                    <button class="select-plan-btn mt-auto w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition" data-plan="Premium" data-price="39999">Select Plan</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Form Section -->
+        <section id="payment-form-section" class="mt-24 max-w-2xl mx-auto hidden">
+            <div class="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                <h2 class="text-3xl font-bold text-white text-center mb-2">Complete Your Subscription</h2>
+                <p id="selected-plan-text" class="text-center text-blue-400 mb-8"></p>
+                
+                <form id="payment-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-300 mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full bg-gray-700 text-white p-3 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-300 mb-2">Card Details</label>
+                        <div class="bg-gray-700 p-3 rounded-lg border border-gray-600">
+                            <!-- This is a placeholder for a real payment element from Stripe, etc. -->
+                            <p class="text-gray-500">Demo payment field. No real data needed.</p>
+                        </div>
+                    </div>
+                    <input type="hidden" id="plan-name" name="plan-name">
+                    <button type="submit" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition text-lg">
+                        <span id="btn-text">Subscribe Now</span>
+                        <span id="btn-loader" class="hidden">Processing...</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Success Message -->
+        <div id="success-message" class="hidden mt-24 max-w-2xl mx-auto text-center bg-green-900 border border-green-700 p-8 rounded-lg">
+            <h2 class="text-3xl font-bold text-white mb-4">Thank You!</h2>
+            <p class="text-lg text-green-300">Your subscription is complete. I will be in touch shortly to discuss the next steps for our collaboration!</p>
+        </div>
+    </main>
+
+    <script type="module">
+        // Import Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- Firebase Initialization ---
+        let db, auth;
+        try {
+            // These variables are provided by the environment.
+            const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+            if (Object.keys(firebaseConfig).length > 0) {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                setLogLevel('debug'); // Use 'debug' for development
+
+                // Sign in the user
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                console.log("Firebase initialized and user signed in.");
+            } else {
+                 console.error("Firebase config is missing.");
+            }
+        } catch (error) {
+            console.error("Firebase initialization failed:", error);
+        }
+
+        // --- DOM Elements ---
+        const paymentSection = document.getElementById('payment-form-section');
+        const pricingSection = document.getElementById('pricing');
+        const paymentForm = document.getElementById('payment-form');
+        const selectedPlanText = document.getElementById('selected-plan-text');
+        const planNameInput = document.getElementById('plan-name');
+        const successMessage = document.getElementById('success-message');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnLoader = document.getElementById('btn-loader');
+        
+        // --- Event Listeners ---
+        document.querySelectorAll('.select-plan-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const plan = e.target.dataset.plan;
+                const price = e.target.dataset.price;
+
+                // Update form details
+                selectedPlanText.textContent = `You have selected the ${plan} Plan for ₹${price}/month.`;
+                planNameInput.value = plan;
+                
+                // Show payment form
+                paymentSection.classList.remove('hidden');
+                pricingSection.classList.add('hidden');
+                
+                // Scroll to the form
+                paymentSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        paymentForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            if (!db) {
+                console.error("Firestore is not initialized. Cannot save data.");
+                // Optionally show an error message to the user
+                alert("Payment service is currently unavailable. Please try again later.");
+                return;
+            }
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.classList.add('hidden');
+            btnLoader.classList.remove('hidden');
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const plan = planNameInput.value;
+            
+            try {
+                // Save subscription data to Firestore
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+                const subscriptionsCollection = collection(db, `/artifacts/${appId}/public/data/subscriptions`);
+                
+                await addDoc(subscriptionsCollection, {
+                    name: name,
+                    email: email,
+                    plan: plan,
+                    subscribedAt: serverTimestamp()
+                });
+
+                console.log("Subscription saved successfully!");
+
+                // Hide form and show success message
+                paymentSection.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+                successMessage.scrollIntoView({ behavior: 'smooth' });
+
+            } catch (error)
+            {
+                console.error("Error writing document: ", error);
+                // Optionally show an error message to the user
+                alert("There was an error processing your subscription. Please try again.");
+                // Hide loading state
+                submitBtn.disabled = false;
+                btnText.classList.remove('hidden');
+                btnLoader.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
